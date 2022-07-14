@@ -4,9 +4,9 @@ import android.content.Context
 
 class PrefsScanActive(context:Context) {
 
-    internal val SHARED_NAME_PREF = "ScanActive"
-    internal val SHARED_INIT = "init_signIn"
-    internal val SHARED_FINALIZE = "finalize_logOut"
+    private val SHARED_NAME_PREF = "ScanActive"
+    private val SHARED_INIT = "init_signIn"
+    private val SHARED_FINALIZE = "finalize_logOut"
 
     val storage = context.getSharedPreferences(SHARED_NAME_PREF,0)
 
