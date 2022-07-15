@@ -1,4 +1,4 @@
-package com.example.appbank
+package com.example.appbank.utils.preferences
 
 import android.content.Context
 

@@ -15,7 +15,10 @@
     </style>
 
 
-    <style name="textLogin">
+    <style name="tittleLogin">
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/D35</item>
+        <item name="android:textColor">@color/blueBackground</item>
+        <item name="android:textAlignment">center</item>
     </style>
 </resources>

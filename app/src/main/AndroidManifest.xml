@@ -16,7 +16,7 @@
         android:name=".BankApplication"
         tools:targetApi="31">
         <activity
-            android:name=".StartApp"
+            android:name=".ui.StartApp"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginBank"
+            android:name=".ui.LoginBank"
             android:exported="true"/>
 
     </application>
