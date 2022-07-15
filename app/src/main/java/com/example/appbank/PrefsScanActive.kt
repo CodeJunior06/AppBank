@@ -8,7 +8,7 @@ class PrefsScanActive(context:Context) {
     private val SHARED_INIT = "init_signIn"
     private val SHARED_FINALIZE = "finalize_logOut"
 
-    val storage = context.getSharedPreferences(SHARED_NAME_PREF,0)
+    private val storage = context.getSharedPreferences(SHARED_NAME_PREF,0)
 
     fun saveSharedInit(date:String){
         storage.edit().putString(SHARED_INIT,date).apply()
