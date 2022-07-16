@@ -1,4 +1,4 @@
-package com.example.appbank
+package com.example.appbank.base
 
 import android.app.Application
 import com.example.appbank.utils.preferences.PrefsScanActive

@@ -1,7 +1,9 @@
 package com.example.appbank.utils.preferences
 
 import android.content.Context
+import javax.inject.Singleton
 
+@Singleton
 class PrefsScanActive(context:Context) {
 
     private val SHARED_NAME_PREF = "ScanActive"
