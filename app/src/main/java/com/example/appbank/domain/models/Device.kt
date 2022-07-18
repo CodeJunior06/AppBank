@@ -1,3 +1,3 @@
 package com.example.appbank.domain.models
 
-class Device()
+data class Device(val idDevice:String,val ipDevice:String)

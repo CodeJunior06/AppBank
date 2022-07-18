@@ -1,20 +1,25 @@
 package com.example.appbank.viewmodels.startapp
 
-import androidx.lifecycle.ViewModel
-import com.example.appbank.base.BankApplication.Companion.prefsScanActive
+import android.annotation.SuppressLint
+import android.content.Context
+import android.net.wifi.WifiManager
+import android.text.format.Formatter
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
+import com.example.appbank.base.BaseViewModel
 import com.example.appbank.model.ModelSplash
-import java.util.*
+import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class ViewModelSplash @Inject constructor(modelSplash: ModelSplash) : ViewModel(){
+@HiltViewModel
+class ViewModelSplash @Inject constructor(
+    private val modelSplash: ModelSplash
+) : BaseViewModel() {
 
-    private lateinit var hour:String
+    val adminLogin: MutableLiveData<Boolean> = MutableLiveData()
 
-    fun startApp(){
-        hour = Date().toString()
-        prefsScanActive.saveSharedInit(hour)
+     fun startApp() {
+        modelSplash.invoke()
     }
-
-
-
 }

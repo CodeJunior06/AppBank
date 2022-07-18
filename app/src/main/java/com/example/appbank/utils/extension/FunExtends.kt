@@ -1,8 +1,8 @@
-package com.example.appbank
+package com.example.appbank.utils.extension
 
 import android.app.Activity
 import android.content.Intent
 
-fun Activity.intent(classIntent:Class<*>?) : Intent{
-    return Intent(this,classIntent)
+fun Activity.intentLogin(classIntent:Class<*>?,adminlogin:Boolean) : Intent{
+    return Intent(this,classIntent).putExtra("admin_login",adminlogin)
 }

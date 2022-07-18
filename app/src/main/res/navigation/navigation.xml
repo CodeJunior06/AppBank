@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loandingFragment">
+
+    <fragment
+        android:id="@+id/loginCorrespondentFragment"
+        android:name="com.example.appbank.ui.loginfragments.LoginCorrespondentFragment"
+        android:label="fragment_login_correspondent"
+        tools:layout="@layout/fragment_login_correspondent" />
+    <fragment
+        android:id="@+id/loandingFragment"
+        android:name="com.example.appbank.LoandingFragment"
+        android:label="fragment_loanding"
+        tools:layout="@layout/fragment_loanding" >
+        <action
+            android:id="@+id/action_loandingFragment_to_loginAdminFragment2"
+            app:destination="@id/loginAdminFragment2" />
+        <action
+            android:id="@+id/action_loandingFragment_to_loginCorrespondentFragment"
+            app:destination="@id/loginCorrespondentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginAdminFragment2"
+        android:name="com.example.appbank.ui.loginfragments.LoginAdminFragment"
+        android:label="LoginAdminFragment" />
+</navigation>

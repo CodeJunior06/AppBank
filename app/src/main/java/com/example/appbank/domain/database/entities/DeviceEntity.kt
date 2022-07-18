@@ -5,5 +5,5 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "device")
-data class DeviceEntity(@PrimaryKey(autoGenerate = false) @ColumnInfo(name = "idDevice") val idDevice:String,@ColumnInfo(name = "nameDevice") val nameDevice:String
+data class DeviceEntity(@PrimaryKey(autoGenerate = false) @ColumnInfo(name = "idDevice") val idDevice:String,@ColumnInfo(name = "ipDevice") val ipDevice:String
 )
