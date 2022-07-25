@@ -17,7 +17,7 @@ constructor(@ApplicationContext context:Context, val repositorySplash: Repositor
 
     private val context: Context by lazy { context }
 
-      fun invoke():Device{
+     suspend operator fun invoke():Device{
         repositorySplash.getObjectFirestore()
         getIp()
         getIdUnique()

@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class FirestoreImp @Inject constructor(val dataBase: FirebaseFirestore) : FirestoreRepository {
 
-    override  fun getDeviceInformation() {
+    override  suspend fun getDeviceInformation() {
         dataBase.collection("device_auth").get().addOnSuccessListener { result ->
             for (document in result) {
                 println(document.data["ipDevice"])
