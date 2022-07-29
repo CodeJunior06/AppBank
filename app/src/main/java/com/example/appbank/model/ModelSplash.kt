@@ -13,16 +13,17 @@ import javax.inject.Inject
 
 class ModelSplash
 @Inject
-constructor(@ApplicationContext context:Context, val repositorySplash: RepositorySplash) {
+constructor(@ApplicationContext context: Context, val repositorySplash: RepositorySplash) {
 
     private val context: Context by lazy { context }
 
-     suspend operator fun invoke():Device{
-        repositorySplash.getObjectFirestore()
+    suspend operator fun invoke() {
+
+        val modelFirestore = repositorySplash.getObjectFirestore()
+        println(modelFirestore?.adminDevice)
         getIp()
         getIdUnique()
-        println(getIp() +"" +getIdUnique())
-        return Device("","")
+        println(getIp() + "" + getIdUnique())
     }
 
     private fun getIp(): String {

@@ -2,7 +2,10 @@ package com.example.appbank.di
 
 import com.example.appbank.domain.database.firestore.FirestoreImp
 import com.example.appbank.domain.database.firestore.implement.FirestoreRepository
+import com.google.firebase.FirebaseApp
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +20,7 @@ object FirebaseModule {
     @Provides
     @Singleton
     fun provideFirestoreInstance():FirebaseFirestore{
-        return FirebaseFirestore.getInstance()
+        return Firebase.firestore
     }
 
     @Provides
