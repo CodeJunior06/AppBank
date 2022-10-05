@@ -20,7 +20,7 @@ constructor(@ApplicationContext context: Context, val repositorySplash: Reposito
     suspend operator fun invoke() {
 
         val modelFirestore = repositorySplash.getObjectFirestore()
-        println(modelFirestore?.adminDevice)
+        println("COMO ASI"+modelFirestore?.adminDevice)
         getIp()
         getIdUnique()
         println(getIp() + "" + getIdUnique())

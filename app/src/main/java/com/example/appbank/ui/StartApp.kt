@@ -52,7 +52,7 @@ class StartApp : AppCompatActivity() {
                    }*/
         }
 
-        Thread.sleep(6000)
+        Thread.sleep(10000)
         startActivity(Intent(this,LoginBank::class.java))
         finish()
     }
